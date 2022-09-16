@@ -1,0 +1,16 @@
+{
+  "name": "p5.b5",
+  "version": "0.0.1",
+  "description": "A p5 library to facilitate using the Beholder system for Aruco marker detection.",
+  "main": "dist/p5.b5.js",
+  "scripts": {
+    "build:dev": "npx webpack --mode development --node-env development",
+    "build:prod": "npx webpack --mode production --node-env production",
+    "build:all": "npx webpack --mode production --node-env production && npx webpack --mode development --node-env development"
+  },
+  "author": "Enric Granzotto Llagostera",
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  }
+}
