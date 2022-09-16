@@ -20,7 +20,7 @@ You can also find more info about [Aruco markers here](https://docs.opencv.org/3
 
 An example of the **Beholder** system in use is the game [DE VOLTA](https://enric.llagostera.com.br/2022/07/04/de-volta/), created for the [Tinycade](https://tinycade.github.io/tinycade-homepage/) system.
 
-![DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022](https://github.com/enricllagostera/p5.b5/blob/main/imgs/devolta.gif?raw=true)
+![DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022](https://enric.llagostera.com.br/wp-content/uploads/2022/07/20220704_AFkBQml.gif)
 
 _DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022._
 
@@ -39,16 +39,16 @@ There is a template ZIP file with an example project in the root folder of this 
 To use p5.b5, include the `p5.b5.js` (or the minified version `p5.b5.min.js`) script in your HTML. You can include it directly from UNPKG:
 
 ```html
-<script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.js"></script>
+<script src="https://unpkg.com/p5.b5@0.0.7/dist/p5.b5.js"></script>
 ```
 
-You can also download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.js) and include it in your HTML from your local project folder.
+OR You can also download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.js). The compressed and non-compressed versions are in the `dist` folder of this package as well. Then, include the script in your HTML from your local project folder.
 
-After that, the `b5` object should be now ready to use from within your sketch.
+After either of the options above, the `b5` object should be now ready to use from within your sketch.
 
 #### p5 web editor
 
-You can use p5.b5 with the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.js"></script>`. After that, you can use the `b5` object in your `sketch.js` file.
+You can use p5.b5 directly in the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.b5@0.0.7/dist/p5.b5.js"></script>`. After that, you can use the `b5` object in your `sketch.js` file.
 
 ## Use
 
@@ -66,7 +66,7 @@ You can use [this website](https://chev.me/arucogen/) to generate and print Aruc
 <html lang="en">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
-    <script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.min.js"></script>
+    <script src="https://unpkg.com/p5.b5@0.0.7/dist/p5.b5.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
   </head>
