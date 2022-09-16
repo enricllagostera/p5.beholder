@@ -20,8 +20,7 @@ You can also find more info about [Aruco markers here](https://docs.opencv.org/3
 
 An example of the **Beholder** system in use is the game [DE VOLTA](https://enric.llagostera.com.br/2022/07/04/de-volta/), created for the [Tinycade](https://tinycade.github.io/tinycade-homepage/) system.
 
-![DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022](https://github.com/enricllagostera/p5.b5/blob/main/docs/imgs/devolta.gif?raw=true)
-
+![DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022](https://github.com/enricllagostera/p5.b5/blob/main/docs/imgs/devolta.gif?raw=true)  
 _DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022._
 
 ### Why p5.b5?
