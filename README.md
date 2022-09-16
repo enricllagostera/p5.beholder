@@ -36,23 +36,23 @@ There is a template ZIP file with an example project in the root folder of this 
 
 ### Setup
 
-For now, using p5.b5 is a two step process. In the future, the library will be a single file, which will be available on a CDN.
-
-Include the `b5` script in your HTML.
-
-You can include it directly from UNPKG:
+To use p5.b5, include the `p5.b5.js` (or the minified version `p5.b5.min.js`) script in your HTML. You can include it directly from UNPKG:
 
 ```html
-<script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.min.js"></script>
+<script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.js"></script>
 ```
 
-Or download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.min.js) and include it from your local project.
+You can also download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.js) and include it in your HTML from your local project folder.
 
-The `b5` object should be now ready to use from within your sketch.
+After that, the `b5` object should be now ready to use from within your sketch.
+
+#### p5 web editor
+
+You can use p5.b5 with the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.js"></script>`. After that, you can use the `b5` object in your `sketch.js` file.
 
 ## Use
 
-1. **Make sure you are serving your sketch from a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts).** This necessary for security reasons. Browsers only allow access to cameras from sites in secure contexts, such as served via `https://` or in a `localhost`.
+1. **Make sure you are running your sketch from a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts).** This necessary for security reasons. Browsers only allow access to cameras from sites in secure contexts, such as served via `https://` or in a `localhost`. The p5 online editor is on a secure context, so it should work alright.
 2. **Add the `b5.prepareBeholder()` call in the `setup` function of your sketch.** This initializes Beholder with a default configuration. You can pass in a configuration object ([more info here](https://github.com/project-beholder/beholder-detection#custom-config)) and a query selector to an HTML element to be Beholder's root.
 3. **Use the methods in the `b5` from within your sketch.**
 
@@ -60,7 +60,25 @@ You can use [this website](https://chev.me/arucogen/) to generate and print Aruc
 
 ### Quick sample
 
+```html
+<!-- Your index.html file -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+    <script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main></main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
+```
+
 ```js
+/* Your sketch.js file */
 function setup() {
   createCanvas(640, 480);
   b5.prepareBeholder();
@@ -92,4 +110,5 @@ Some useful functions that map coordinates from the camera range to the sketch's
 - `b5.cameraToCanvasX(x)` : returns a number for X axis.
 - `b5.cameraToCanvasY(y)` : returns a number for Y axis.
 - `b5.cameraToCanvasXY(x, y)` : returns an object with `x` and `y` values.
-- `b5.cameraToCanvasCoord({ x, y})` : : returns an object with `x` and `y` values.
+- `b5.cameraToCanvasCoord({ x, y})` : returns an object with `x` and `y` values.
+- `b5.drawDebugMarker(ID)` : creates canvas-adjusted visualization of the marker with ID.
