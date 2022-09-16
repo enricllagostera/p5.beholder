@@ -19,11 +19,11 @@ There is a template ZIP file with an example project in the root folder of this 
    ```
    - OR you can download the file from [here](https://unpkg.com/beholder-detection@1.3.1/dist/beholder-detection.js) and add it to your project.
 2. Include the `b5` script in your HTML.
-   - You can include it directly from UNPKG:
+   - (**SOON, but not yet**) You can include it directly from UNPKG:
    ```html
    <script src="https://unpkg.com/p5.b5@0.01/dist/p5.b5.min.js"></script>
    ```
-   - OR download the file from [here](https://unpkg.com/p5.b5@0.01/dist/p5.b5.min.js) and add it to your project.
+   - OR download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.min.js) and add it to your project.
 
 After these two steps, the `b5` object should be ready to use from within your sketch.
 
@@ -37,20 +37,20 @@ After these two steps, the `b5` object should be ready to use from within your s
 
 ```js
 function setup() {
-  createCanvas(640, 480)
-  b5.prepareBeholder()
+  createCanvas(640, 480);
+  b5.prepareBeholder();
 }
 
 function draw() {
   // Shows a black background if marker 0 is present
   if (b5.getMarker(0).present) {
-    background(0)
+    background(0);
   } else {
     // Shows a white background if marker 0 is NOT present
-    background(255)
+    background(255);
   }
   // Shows information about marker with ID 0
-  b5.drawDebugMarker(0)
+  b5.drawDebugMarker(0);
 }
 ```
 
