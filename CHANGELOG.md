@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/enricllagostera/b5/compare/v0.0.7...v0.0.8) (2022-09-16)
+
+
+### Bug Fixes
+
+* Broken img on readme ([a1c9063](https://github.com/enricllagostera/b5/commit/a1c9063cfca8a6d2fdb8d272d0433e852d504a61))
+* Broken img on readme ([911b501](https://github.com/enricllagostera/b5/commit/911b501b4ebda3dfafb8db6713dfbf41d3566873))
+
 ### [0.0.7](https://github.com/enricllagostera/b5/compare/v0.0.6...v0.0.7) (2022-09-16)
 
 
