@@ -43,7 +43,7 @@ Include the `b5` script in your HTML.
 You can include it directly from UNPKG:
 
 ```html
-<script src="https://unpkg.com/p5.b5@0.0.3/dist/p5.b5.min.js"></script>
+<script src="https://unpkg.com/p5.b5@0.0.4/dist/p5.b5.min.js"></script>
 ```
 
 Or download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.min.js) and include it from your local project.
