@@ -20,7 +20,7 @@ You can also find more info about [Aruco markers here](https://docs.opencv.org/3
 
 An example of the **Beholder** system in use is the game [DE VOLTA](https://enric.llagostera.com.br/2022/07/04/de-volta/), created for the [Tinycade](https://tinycade.github.io/tinycade-homepage/) system.
 
-![DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022](imgs/devolta.gif)
+![DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022](https://github.com/enricllagostera/p5.b5/blob/main/imgs/devolta.gif?raw=true)
 
 _DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022._
 
@@ -43,7 +43,7 @@ Include the `b5` script in your HTML.
 You can include it directly from UNPKG:
 
 ```html
-<script src="https://unpkg.com/p5.b5@0.0.4/dist/p5.b5.min.js"></script>
+<script src="https://unpkg.com/p5.b5@0.0.5/dist/p5.b5.min.js"></script>
 ```
 
 Or download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.min.js) and include it from your local project.
