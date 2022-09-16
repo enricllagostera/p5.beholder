@@ -38,20 +38,17 @@ There is a template ZIP file with an example project in the root folder of this 
 
 For now, using p5.b5 is a two step process. In the future, the library will be a single file, which will be available on a CDN.
 
-1. Include the `beholder-detection` (version 1.3.1) script in your HTML.
-   - You can include it directly from UNPKG:
-   ```html
-   <script src="https://unpkg.com/beholder-detection@1.3.1/dist/beholder-detection.js"></script>
-   ```
-   - OR you can download the file from [here](https://unpkg.com/beholder-detection@1.3.1/dist/beholder-detection.js) and add it to your project.
-2. Include the `b5` script in your HTML.
-   - (**SOON, but not yet**) You can include it directly from UNPKG:
-   ```html
-   <script src="https://unpkg.com/p5.b5@0.01/dist/p5.b5.min.js"></script>
-   ```
-   - OR download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.min.js) and add it to your project.
+Include the `b5` script in your HTML.
 
-After these two steps, the `b5` object should be ready to use from within your sketch.
+You can include it directly from UNPKG:
+
+```html
+<script src="https://unpkg.com/p5.b5@0.0.3/dist/p5.b5.min.js"></script>
+```
+
+Or download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.b5/main/dist/p5.b5.min.js) and include it from your local project.
+
+The `b5` object should be now ready to use from within your sketch.
 
 ## Use
 
