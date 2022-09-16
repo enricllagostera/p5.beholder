@@ -1,5 +1,6 @@
 // import BeholderLib from 'beholder-detection/dist/beholder-detection.js';
-const b5 = window["beholder-detection"].default;
+const Beholder = require("beholder-detection");
+const b5 = Beholder.default;
 
 b5.isReady = false;
 b5.b5DefaultConfig = {
