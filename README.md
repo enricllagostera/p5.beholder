@@ -23,7 +23,7 @@ An example of the **Beholder** system in use is the game [DE VOLTA](https://enri
 ![DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022](https://github.com/enricllagostera/p5.beholder/blob/main/docs/imgs/devolta.gif?raw=true)  
 _DE VOLTA being played on a Tinycade at alt.ctrl.GDC 2022._
 
-### Why p5.b5?
+### Why p5.beholder?
 
 My goal in making **p5.beholder** is to make experimentation with Beholder easier for p5 users. I like using p5 to try out ideas without having to worry much about setting up a lot of tools. I created p5.beholder to streamline the setup for my own prototyping needs, and it's basically a thin shell hooking into the amazing work of the Beholder creators!
 
@@ -31,7 +31,7 @@ My goal in making **p5.beholder** is to make experimentation with Beholder easie
 
 ### Template project
 
-There is a template ZIP file with an example project in the root folder of this repository, called [`p5-b5-template.zip`](https://github.com/enricllagostera/p5.beholder/blob/main/p5-b5-template.zip). You can download it, extract and use it as a starting point for your project.
+There is a template ZIP file with an example project in the root folder of this repository, called [`p5-beholder-template.zip`](https://github.com/enricllagostera/p5.beholder/blob/main/p5-beholder-template.zip). You can download it, extract and use it as a starting point for your project.
 
 ### Setup
 
@@ -43,17 +43,17 @@ To use p5.beholder, include the `p5.beholder.js` (or the minified version `p5.be
 
 OR You can also download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.beholder/main/dist/p5.beholder.js). The compressed and non-compressed versions are in the `dist` folder of this package as well. Then, include the script in your HTML from your local project folder.
 
-After either of the options above, the `b5` object should be now ready to use from within your sketch.
+After either of the options above, the `beholder` object should be now ready to use from within your sketch.
 
 #### p5 web editor
 
-You can use p5.beholder directly in the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.beholder@0.0.8/dist/p5.beholder.js"></script>`. After that, you can use the `b5` object in your `sketch.js` file.
+You can use p5.beholder directly in the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.beholder@0.0.8/dist/p5.beholder.js"></script>`. After that, you can use the `beholder` object in your `sketch.js` file.
 
 ## Use
 
 1. **Make sure you are running your sketch from a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts).** This necessary for security reasons. Browsers only allow access to cameras from sites in secure contexts, such as served via `https://` or in a `localhost`. The p5 online editor is on a secure context, so it should work alright.
 2. **Add the `beholder.prepare()` call in the `setup` function of your sketch.** This initializes Beholder with a default configuration. You can pass in a configuration object ([more info here](https://github.com/project-beholder/beholder-detection#custom-config)) and a query selector to an HTML element to be Beholder's root (if the element does not exist, it will be appended as a child of the HTML `<body>`).
-3. **Use the methods in the `b5` from within your sketch.**
+3. **Use the methods in the `beholder` from within your sketch.**
 
 You can use [this website](https://chev.me/arucogen/) to generate and print Aruco markers (select the "Original Aruco" option on the dropdown).
 
@@ -98,7 +98,7 @@ function draw() {
 
 ## Features
 
-With this library, you can use the functions of the Beholder library through the `b5` object. It takes care of initializing and updating in the correct moments.
+With this library, you can use the functions of the Beholder library through the `beholder` object. It takes care of initializing and updating in the correct moments.
 
 ### Utilities
 
