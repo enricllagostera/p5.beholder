@@ -23,15 +23,15 @@ let config = {
 };
 
 function setup() {
-  b5.prepareBeholder(config);
+  beholder.prepare(config);
   createCanvas(640, 480);
 }
 
 function draw() {
-  if (b5.getMarker(0).present) {
+  if (beholder.getMarker(0).present) {
     background(200);
   } else {
     background(100);
   }
-  b5.drawDebugMarker(0);
+  beholder.drawDebugMarker(0);
 }

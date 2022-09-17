@@ -1,8 +1,8 @@
 {
-  "name": "p5.b5",
+  "name": "p5.beholder",
   "version": "0.0.8",
   "description": "A p5 library to facilitate using the Beholder system for Aruco marker detection.",
-  "main": "dist/p5.b5.js",
+  "main": "dist/p5.beholder.js",
   "scripts": {
     "build:dev": "npx webpack --mode development --node-env development",
     "build:prod": "npx webpack --mode production --node-env production",
