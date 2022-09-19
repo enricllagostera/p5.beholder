@@ -1,6 +1,6 @@
 # p5.beholder
 
-This is a library for the [`p5`](http://p5js.org) creative coding tool. It facilitates using the [Beholder](https://github.com/project-beholder/beholder-detection) system (not created by me) with p5.
+This is a library for the [p5](http://p5js.org) creative coding tool. It facilitates using the [Beholder](https://github.com/project-beholder/beholder-detection) system (not created by me) with p5.
 
 ## Introduction
 
