@@ -51,7 +51,7 @@ You can use p5.beholder directly in the p5 online editor. Go to the `index.html`
 
 ## Use
 
-1. **Make sure you are running your sketch from a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts).** This necessary for security reasons. Browsers only allow access to cameras from sites in secure contexts, such as served via `https://` or in a `localhost`. The p5 online editor is on a secure context, so it should work alright.
+1. **Make sure you are running your sketch from a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts).** Browsers only allow access to cameras from sites in secure contexts, for security reasons. Sites served via `https://` or in a `localhost` are considered safe. The p5 online editor is on a secure context, so it should work out-of-the-box too.
 2. **Add the `beholder.prepare()` call in the `setup` function of your sketch.** This initializes Beholder with a default configuration. You can pass in a configuration object ([more info here](https://github.com/project-beholder/beholder-detection#custom-config)) and a query selector to an HTML element to be Beholder's root (if the element does not exist, it will be appended as a child of the HTML `<body>`).
 3. **Use the methods in the `beholder` from within your sketch.**
 
