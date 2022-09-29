@@ -41,11 +41,70 @@ beholder.prepare = (
 beholder.preUpdate = () => {
   beholder.cameraWidth = beholder.getVideo().width;
   beholder.cameraHeight = beholder.getVideo().height;
+  let prevPresence = beholder.getAllMarkers().map((m) => m.present);
   beholder.update();
+  let currPresence = beholder.getAllMarkers().map((m) => m.present);
+  // console.log(frameCount, "prev", prevPresence[0], "curr", currPresence[0]);
+
+  if (frameCount == 1) {
+    prevPresence = [false];
+    currPresence = [false];
+  }
+  // console.log(frameCount, "prev", prevPresence[0], "curr", currPresence[0]);
+
+  prevPresence.forEach((prevState, index) => {
+    const currState = currPresence[index];
+    if (prevState == false && currState == true) {
+      let evDetected = new CustomEvent("markerdetected", {
+        detail: { id: index, marker: currPresence[index] },
+      });
+      window.dispatchEvent(evDetected);
+      return;
+    }
+    if (prevState == true && currState == false) {
+      let evUndetected = new CustomEvent("markerundetected", {
+        detail: { id: index, marker: currPresence[index] },
+      });
+      window.dispatchEvent(evUndetected);
+      return;
+    }
+  });
 };
 
 if (p5) {
   p5.prototype.registerMethod("pre", beholder.preUpdate);
+
+  beholder.markerPresenceToKey = (markerId, pKeyCode) => {
+    window.addEventListener("markerdetected", (e) => {
+      if (e.detail.id == markerId) {
+        window.dispatchEvent(
+          new KeyboardEvent("keydown", {
+            bubbles: true,
+            cancelable: true,
+            keyCode: pKeyCode,
+          })
+        );
+      }
+    });
+    window.addEventListener("markerundetected", (e) => {
+      if (e.detail.id == markerId) {
+        window.dispatchEvent(
+          new KeyboardEvent("keyup", {
+            bubbles: true,
+            cancelable: true,
+            keyCode: pKeyCode,
+          })
+        );
+      }
+    });
+  };
+
+  beholder.setMarkersTimeout = (timeout = 50) => {
+    for (let i = 0; i < beholder.getAllMarkers().length; i++) {
+      const item = beholder.getMarker(i);
+      item.timeout = timeout;
+    }
+  };
 
   beholder.drawDebugMarker = (markerId = 0) => {
     let marker = beholder.getMarker(markerId);
