@@ -1,10 +1,10 @@
 function setup() {
   createCanvas(640, 480);
-  beholder.prepare();
+  p5beholder.prepare();
   // makes the timeout a bit longer, so there are less false negatives in detection
-  beholder.setMarkersTimeout(100);
+  p5beholder.setMarkersTimeout(100);
   // if marker 0 is present, the key 65 ("a") is pressed
-  beholder.markerPresenceToKey(0, 65);
+  p5beholder.markerPresenceToKey(0, 65);
 }
 
 function draw() {

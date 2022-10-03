@@ -1,10 +1,11 @@
 let marker0;
 
 function setup() {
-  beholder.prepare();
+  p5beholder.prepare();
   createCanvas(640, 480);
+  background(color("blue"));
   // store reference to marker with id 0
-  marker0 = beholder.getMarker(0);
+  marker0 = p5beholder.getMarker(0);
 }
 
 function draw() {
@@ -14,6 +15,6 @@ function draw() {
   if (marker0.present) {
     // changes bg color and draws marker 0 info if detected
     background(color("lavender"));
-    beholder.drawDebugMarker(0);
+    p5beholder.debugDrawMarker(0);
   }
 }

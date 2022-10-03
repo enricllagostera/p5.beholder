@@ -4,9 +4,9 @@ let lastAngle;
 let detectionRangeDegrees = 10;
 
 function setup() {
-  beholder.prepare();
+  p5beholder.prepare();
   createCanvas(300, 300);
-  mk0 = beholder.getMarker(0);
+  mk0 = p5beholder.getMarker(0);
   baseAngle = mk0.rotation;
   lastAngle = baseAngle;
 }
@@ -53,7 +53,7 @@ function detectAndDisplayRange(
 
   // Draw different if within bounds
   if (
-    beholder.angleInRange(
+    p5beholder.angleInRange(
       currentAngle,
       radians(detectionTargetAngle),
       radians(angleRange)

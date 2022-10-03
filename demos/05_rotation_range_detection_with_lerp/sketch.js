@@ -8,10 +8,10 @@ let detectionRangeDegrees = 10;
 let gui = [];
 
 function setup() {
-  beholder.prepare({});
+  p5beholder.prepare({});
   let cnv = createCanvas(300, 300);
   console.log(cnv);
-  mk0 = beholder.getMarker(0);
+  mk0 = p5beholder.getMarker(0);
   baseAngle = mk0.rotation;
   lastAngle = baseAngle;
 
@@ -78,13 +78,13 @@ function detectRange(
   angleLine(lineColor, radians(detectionTargetAngle - angleRange / 2), 2);
   angleLine(lineColor, radians(detectionTargetAngle + angleRange / 2), 2);
 
-  // Calculate angle with detection zone
-  const dv = p5.Vector.fromAngle(radians(detectionTargetAngle), 1);
-  const av = p5.Vector.fromAngle(currentAngle, 1);
-  const da = dv.angleBetween(av);
-
-  // Draw different if within bounds
-  if (abs(da) <= radians(angleRange)) {
+  if (
+    p5beholder.angleInRange(
+      currentAngle,
+      radians(detectionTargetAngle),
+      radians(angleRange)
+    )
+  ) {
     angleLine(lineColor, radians(detectionTargetAngle), 15);
   }
 }

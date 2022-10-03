@@ -43,17 +43,17 @@ To use p5.beholder, include the `p5.beholder.js` (or the minified version `p5.be
 
 OR You can also download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.beholder/main/dist/p5.beholder.js). The compressed and non-compressed versions are in the `dist` folder of this package as well. Then, include the script in your HTML from your local project folder.
 
-After either of the options above, the `beholder` object should be now ready to use from within your sketch.
+After either of the options above, the `p5beholder` object should be now ready to use from within your sketch.
 
 #### p5 web editor
 
-You can use p5.beholder directly in the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.beholder@1.0.1/dist/p5.beholder.js"></script>`. After that, you can use the `beholder` object in your `sketch.js` file.
+You can use p5.beholder directly in the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.beholder@1.0.1/dist/p5.beholder.js"></script>`. After that, you can use the `p5beholder` object in your `sketch.js` file.
 
 ## Use
 
 1. **Make sure you are running your sketch from a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts).** Browsers only allow access to cameras from sites in secure contexts, for security reasons. Sites served via `https://` or in a `localhost` are considered safe. The p5 online editor is on a secure context, so it should work out-of-the-box too.
-2. **Add the `beholder.prepare()` call in the `setup` function of your sketch.** This initializes Beholder with a default configuration. You can pass in a configuration object ([more info here](https://github.com/project-beholder/beholder-detection#custom-config)) and a query selector to an HTML element to be Beholder's root (if the element does not exist, it will be appended as a child of the HTML `<body>`).
-3. **Use the methods in the `beholder` from within your sketch.**
+2. **Add the `p5beholder.prepare()` call in the `setup` function of your sketch.** This initializes Beholder with a default configuration. You can pass in a configuration object ([more info here](https://github.com/project-beholder/beholder-detection#custom-config)) and a query selector to an HTML element to be Beholder's root (if the element does not exist, it will be appended as a child of the HTML `<body>`).
+3. **Use the methods in the `p5beholder` from within your sketch.**
 
 You can use [this website](https://chev.me/arucogen/) to generate and print Aruco markers (select the "Original Aruco" option on the dropdown).
 
@@ -80,34 +80,34 @@ You can use [this website](https://chev.me/arucogen/) to generate and print Aruc
 /* Your sketch.js file */
 function setup() {
   createCanvas(640, 480);
-  beholder.prepare();
+  p5beholder.prepare();
 }
 
 function draw() {
   // Shows a black background if marker 0 is present
-  if (beholder.getMarker(0).present) {
+  if (p5beholder.getMarker(0).present) {
     background(0);
   } else {
     // Shows a white background if marker 0 is NOT present
     background(255);
   }
   // Shows information about marker with ID 0
-  beholder.drawDebugMarker(0);
+  p5beholder.drawDebugMarker(0);
 }
 ```
 
 ## Features
 
-With this library, you can use the functions of the Beholder library through the `beholder` object. It takes care of initializing and updating in the correct moments.
+With this library, you can use the functions of the Beholder library through the `p5beholder` object. It takes care of updating automatically, and initialization happens at in the `setup()` of your sketch.
 
-### Utilities
+Some features are:
 
-Some useful functions that map coordinates from the camera range to the sketch's canvas range.
+1. **Marker presence to keyboard events.**
+2. **Marker presence to mouse click.**
+3. **Marker rotation within range.**
+4. **Camera to canvas utility functions.** These useful functions that map coordinates from the camera range to the sketch's canvas range. Example: `p5beholder.cameraHeight` : returns camera height in pixels; `p5beholder.cameraToCanvasXY(x, y)` returns an object with `x` and `y` values.
+5. **Debug drawing of markers on the canvas.** Using `p5beholder.debugDrawMarker(ID)` creates a canvas-adjusted visualization of a marker.
 
-- `beholder.cameraHeight` : returns camera height in pixels.
-- `beholder.cameraWidth` : returns camera width in pixels.
-- `beholder.cameraToCanvasX(x)` : returns a number for X axis.
-- `beholder.cameraToCanvasY(y)` : returns a number for Y axis.
-- `beholder.cameraToCanvasXY(x, y)` : returns an object with `x` and `y` values.
-- `beholder.cameraToCanvasCoord({ x, y})` : returns an object with `x` and `y` values.
-- `beholder.drawDebugMarker(ID)` : creates canvas-adjusted visualization of the marker with ID.
+### API
+
+You can see detailed information about the library functions on the [API documentation](docs).
