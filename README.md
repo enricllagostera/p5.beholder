@@ -110,4 +110,4 @@ Some features are:
 
 ### API
 
-You can see detailed information about the library functions on the [API documentation](docs).
+You can see detailed information about the library functions on the [P5Beholder API documentation](https://enricllagostera.github.io/p5.beholder/P5Beholder.html).
