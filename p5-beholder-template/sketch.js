@@ -23,15 +23,15 @@ let config = {
 };
 
 function setup() {
-  beholder.prepare(config);
+  p5beholder.prepare(config);
   createCanvas(640, 480);
 }
 
 function draw() {
-  if (beholder.getMarker(0).present) {
+  if (p5beholder.getMarker(0).present) {
     background(200);
   } else {
     background(100);
   }
-  beholder.drawDebugMarker(0);
+  p5beholder.drawDebugMarker(0);
 }

@@ -38,7 +38,7 @@ There is a template ZIP file with an example project in the root folder of this 
 To use p5.beholder, include the `p5.beholder.js` (or the minified version `p5.beholder.min.js`) script in your HTML. You can include it directly from UNPKG:
 
 ```html
-<script src="https://unpkg.com/p5.beholder@1.0.1/dist/p5.beholder.js"></script>
+<script src="https://unpkg.com/p5.beholder@2.0.0/dist/p5.beholder.js"></script>
 ```
 
 OR You can also download the file from [here](https://raw.githubusercontent.com/enricllagostera/p5.beholder/main/dist/p5.beholder.js). The compressed and non-compressed versions are in the `dist` folder of this package as well. Then, include the script in your HTML from your local project folder.
@@ -47,7 +47,7 @@ After either of the options above, the `p5beholder` object should be now ready t
 
 #### p5 web editor
 
-You can use p5.beholder directly in the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.beholder@1.0.1/dist/p5.beholder.js"></script>`. After that, you can use the `p5beholder` object in your `sketch.js` file.
+You can use p5.beholder directly in the p5 online editor. Go to the `index.html` file of your sketch and include the script from UNPKG: `<script src="https://unpkg.com/p5.beholder@2.0.0/dist/p5.beholder.js"></script>`. After that, you can use the `p5beholder` object in your `sketch.js` file.
 
 ## Use
 
@@ -65,7 +65,7 @@ You can use [this website](https://chev.me/arucogen/) to generate and print Aruc
 <html lang="en">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
-    <script src="https://unpkg.com/p5.beholder@1.0.1/dist/p5.beholder.min.js"></script>
+    <script src="https://unpkg.com/p5.beholder@2.0.0/dist/p5.beholder.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
   </head>
