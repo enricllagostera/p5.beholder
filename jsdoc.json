@@ -1,19 +1,29 @@
 {
+  "markdown": {
+    "hardwrap": false,
+    "idInHeadings": true
+  },
   "opts": {
     "template": "node_modules/clean-jsdoc-theme",
     "theme_opts": {
       "title": "p5.beholder",
       "menu": [
         {
-          "title": "GitHub",
+          "title": "⚒️ Made by Enric Llagostera",
+          "link": "https://enric.llagostera.com.br/",
+          "target": "_blank"
+        },
+        {
+          "title": "📂 GitHub",
           "link": "https://github.com/enricllagostera/p5.beholder",
           "target": "_blank",
           "class": "github-link",
           "id": "repository"
         },
+
         {
-          "title": "Made by Enric Llagostera",
-          "link": "https://enric.llagostera.com.br/",
+          "title": "📦 NPM",
+          "link": "https://www.npmjs.com/package/p5.beholder",
           "target": "_blank"
         }
       ]

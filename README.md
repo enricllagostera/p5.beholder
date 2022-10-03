@@ -98,9 +98,9 @@ function draw() {
 
 ## Features
 
-With this library, you can use the functions of the Beholder library through the `p5beholder` object. It takes care of updating automatically, and initialization happens at in the `setup()` of your sketch.
+With this library, you can use the functions of the Beholder detection system through the `p5beholder` object. It takes care of updating automatically, and initialization happens at in the `setup()` of your sketch.
 
-Some features are:
+Some features are listed below. The demos linked use the Aruco marker with id 0 shown at the bottom of the list. You can print it on a piece of paper or show it on a phone screen to try the demos out.
 
 1. **Marker presence to keyboard events.** See [demo](https://enricllagostera.github.io/p5.beholder/demos/02_marker_presence_to_keyboard/)
 2. **Marker presence to mouse click.** See [demo](https://enricllagostera.github.io/p5.beholder/demos/03_marker_presence_to_mouse_click/).
@@ -108,7 +108,10 @@ Some features are:
 4. **Camera to canvas utility functions.** These useful functions that map coordinates from the camera range to the sketch's canvas range. Example: `p5beholder.cameraHeight` : returns camera height in pixels; `p5beholder.cameraToCanvasXY(x, y)` returns an object with `x` and `y` values.
 5. **Debug drawing of markers on the canvas.** Using `p5beholder.debugDrawMarker(ID)` creates a canvas-adjusted visualization of a marker. See [demo](https://enricllagostera.github.io/p5.beholder/demos/01_basic_marker_detection/).
 
-### API
+![Aruco marker with id 0](docs/imgs/aruco0.png).  
+_Aruco marker with id 0._
+
+## API
 
 You can see detailed information about the library functions on the [P5Beholder API documentation](https://enricllagostera.github.io/p5.beholder/P5Beholder.html).
 
