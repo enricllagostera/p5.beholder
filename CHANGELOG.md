@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/enricllagostera/p5.beholder/compare/v1.0.1...v2.0.0) (2022-10-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* Major refactor, with improved structure
+
+### Features
+
+* Major refactor, with improved structure ([f9e22ac](https://github.com/enricllagostera/p5.beholder/commit/f9e22ac8c199b772fb49ef62e55bf35999a96435))
+* New demos and a basic API for converting markers to keyboard events ([f85be7a](https://github.com/enricllagostera/p5.beholder/commit/f85be7ad98eb67789e1b6ef9a65175b03b1267f0))
+* New helper methods for interactions, with demos ([ff2bc65](https://github.com/enricllagostera/p5.beholder/commit/ff2bc65ca95fc0f13a8d183720221da2057fad46))
+
 ### [1.0.1](https://github.com/enricllagostera/p5.beholder/compare/v1.0.0...v1.0.1) (2022-09-23)
 
 ## [1.0.0](https://github.com/enricllagostera/p5.beholder/compare/v0.0.10...v1.0.0) (2022-09-21)
