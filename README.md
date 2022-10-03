@@ -108,7 +108,7 @@ Some features are listed below. The demos linked use the Aruco marker with id 0 
 4. **Camera to canvas utility functions.** These useful functions that map coordinates from the camera range to the sketch's canvas range. Example: `p5beholder.cameraHeight` : returns camera height in pixels; `p5beholder.cameraToCanvasXY(x, y)` returns an object with `x` and `y` values.
 5. **Debug drawing of markers on the canvas.** Using `p5beholder.debugDrawMarker(ID)` creates a canvas-adjusted visualization of a marker. See [demo](https://enricllagostera.github.io/p5.beholder/demos/01_basic_marker_detection/).
 
-![Aruco marker with id 0](docs/imgs/aruco0.png).  
+![Aruco marker with id 0](https://enricllagostera.github.io/p5.beholder/imgs/aruco0.png).  
 _Aruco marker with id 0._
 
 ## API
