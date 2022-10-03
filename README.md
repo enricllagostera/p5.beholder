@@ -102,12 +102,16 @@ With this library, you can use the functions of the Beholder library through the
 
 Some features are:
 
-1. **Marker presence to keyboard events.**
-2. **Marker presence to mouse click.**
-3. **Marker rotation within range.**
+1. **Marker presence to keyboard events.** See [demo](https://enricllagostera.github.io/p5.beholder/02_marker_presence_to_keyboard)
+2. **Marker presence to mouse click.** See [demo](https://enricllagostera.github.io/p5.beholder/demos/03_marker_presence_to_mouse_click/).
+3. **Marker rotation within range.** See [demo with raw values](docs/demos/04_rotation_detection_simple/) and [with interpolation](docs/demos/05_rotation_range_detection_with_lerp/).
 4. **Camera to canvas utility functions.** These useful functions that map coordinates from the camera range to the sketch's canvas range. Example: `p5beholder.cameraHeight` : returns camera height in pixels; `p5beholder.cameraToCanvasXY(x, y)` returns an object with `x` and `y` values.
-5. **Debug drawing of markers on the canvas.** Using `p5beholder.debugDrawMarker(ID)` creates a canvas-adjusted visualization of a marker.
+5. **Debug drawing of markers on the canvas.** Using `p5beholder.debugDrawMarker(ID)` creates a canvas-adjusted visualization of a marker. See [demo](https://enricllagostera.github.io/p5.beholder/demos/01_basic_marker_detection/).
 
 ### API
 
 You can see detailed information about the library functions on the [P5Beholder API documentation](https://enricllagostera.github.io/p5.beholder/P5Beholder.html).
+
+## License
+
+**p5.beholder** is licensed under the MIT License. You can check its contents [here](https://github.com/enricllagostera/p5.beholder/blob/main/LICENSE).

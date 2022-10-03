@@ -1,8 +1,26 @@
 {
   "opts": {
-    "template": "node_modules/clean-jsdoc-theme"
+    "template": "node_modules/clean-jsdoc-theme",
+    "theme_opts": {
+      "title": "p5.beholder",
+      "menu": [
+        {
+          "title": "GitHub",
+          "link": "https://github.com/enricllagostera/p5.beholder",
+          "target": "_blank",
+          "class": "github-link",
+          "id": "repository"
+        },
+        {
+          "title": "Made by Enric Llagostera",
+          "link": "https://enric.llagostera.com.br/",
+          "target": "_blank"
+        }
+      ]
+    }
   },
   "plugins": ["plugins/markdown"],
+
   "docdash": {
     "static": true,
     "sort": true,
