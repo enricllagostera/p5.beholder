@@ -6,11 +6,15 @@
   "scripts": {
     "build:dev": "npx webpack --mode development --node-env development",
     "build:prod": "npx webpack --mode production --node-env production",
-    "build:all": "npx webpack --mode production --node-env production && npx webpack --mode development --node-env development"
+    "build:all": "npx webpack --mode production --node-env production && npx webpack --mode development --node-env development",
+    "jsdoc": "jsdoc -a all -c jsdoc.json -r ./src/p5.beholder.js -d docs/jsdoc && jsdoc2md --files ./src/p5.beholder.js > docs/API.md"
   },
   "author": "Enric Granzotto Llagostera",
   "license": "MIT",
   "devDependencies": {
+    "docdash": "^1.2.0",
+    "jsdoc": "^3.6.11",
+    "jsdoc-to-markdown": "^7.1.1",
     "webpack-cli": "^4.10.0"
   },
   "repository": {
